@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 import { addArticle } from "../api/job";
 
@@ -20,6 +21,8 @@ const AddNewArticle = () => {
     }
 
     addArticle(newArticle);
+
+    toast.success("Article Added Successfully");
 
     navigate("/");
   }

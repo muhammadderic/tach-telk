@@ -5,6 +5,12 @@
       "title": "Sapu sapu fish",
       "text": "You know about sapu-sapu fish, its a fish that live in the bottom of the river",
       "category": "general"
+    },
+    {
+      "id": "a611",
+      "title": "Its about machine learning",
+      "text": "Machine learning is a field that learn about how an algorithm get more smarter",
+      "category": "ai"
     }
   ]
 }

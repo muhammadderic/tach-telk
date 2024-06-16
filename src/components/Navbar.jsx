@@ -13,7 +13,7 @@ const Navbar = () => {
           to="/"
           className="flex flex-shrink-0 items-center font-bold text-xl text-blue-800 uppercase"
         >
-          tech talk
+          tach telk
         </NavLink>
         <div className="md:ml-auto flex space-x-2">
           <NavLink
