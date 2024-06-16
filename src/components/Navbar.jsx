@@ -7,7 +7,7 @@ const Navbar = () => {
       : "px-3 py-2 hover:bg-blue-600 text-white hover:text-white rounded-md";
 
   return (
-    <nav className="mx-auto max-w-screen-lg p-4 sm:px-6 sm:py-4 lg:px-8 lg:py-6 flex justify-between items-center bg-lime-500">
+    <nav className="mx-auto max-w-screen-lg p-4 sm:px-6 sm:py-4 lg:px-8 lg:py-6 flex justify-between items-center bg-lime-200">
       <div className="w-full flex flex-1 justify-between items-center md:items-stretch md:justify-start">
         <NavLink
           to="/"
