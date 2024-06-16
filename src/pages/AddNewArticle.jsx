@@ -1,14 +1,36 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+import { addArticle } from "../api/job";
 
 const AddNewArticle = () => {
   const [title, setTitle] = useState("");
   const [text, setText] = useState("");
   const [category, setCategory] = useState("general");
 
+  const navigate = useNavigate();
+
+  const submitHandler = (e) => {
+    e.preventDefault()
+
+    const newArticle = {
+      title,
+      text,
+      category,
+    }
+
+    addArticle(newArticle);
+
+    navigate("/");
+  }
+
   return (
     <section className="mx-auto container-lg lg:container">
       <div className="w-full px-6 py-8 mb-4 shadow-md rounded-md border">
-        <form className="w-4/6 mx-auto mb-12">
+        <form
+          className="w-4/6 mx-auto mb-12"
+          onSubmit={submitHandler}
+        >
           <h2 className='mb-6 text-3xl text-center text-blue-800 font-semibold'>Add New Article</h2>
 
           <div className='mb-4'>
