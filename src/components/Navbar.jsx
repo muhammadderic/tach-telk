@@ -28,6 +28,12 @@ const Navbar = () => {
           >
             Add Article
           </NavLink>
+          <NavLink
+            to="/articles"
+            className={navLinkClass}
+          >
+            Articles
+          </NavLink>
         </div>
       </div>
     </nav>

@@ -8,6 +8,7 @@ const HomeCards = () => {
           title="For Tech Enthusiasts"
           text="Dive into our latest tech discussions, reviews, and tutorials."
           link="Read More"
+          to="/articles"
         />
         <Card
           title="For Content Creators"

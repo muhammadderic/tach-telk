@@ -7,7 +7,7 @@ const HomePage = () => {
     <>
       <Hero />
       <HomeCards />
-      <ReadingMaterials />
+      <ReadingMaterials isHome={true} />
     </>
   )
 }

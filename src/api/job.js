@@ -1,11 +1,16 @@
 // Add a new article
 export const addArticle = async (newJob) => {
-  fetch("/api/articles", {
+  return await fetch("/api/articles", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(newJob),
   })
-  return;
+}
+
+// Get all articles
+export const getAllArticles = async () => {
+  const res = await fetch("/api/articles");
+  return res.json();
 }
