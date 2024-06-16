@@ -12,7 +12,8 @@ const HomeCards = () => {
         <Card
           title="For Content Creators"
           text="Share your tech insights, reviews, and tutorials with our community."
-          link="Add Post"
+          link="Add Article"
+          to="/add-article"
         />
       </div>
     </section>

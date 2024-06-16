@@ -4,7 +4,7 @@ const Navbar = () => {
   const navLinkClass = ({ isActive }) =>
     isActive
       ? "px-3 py-2 bg-blue-800 text-white hover:bg-blue-600 hover:text-white rounded-md"
-      : "px-3 py-2 hover:bg-blue-600 text-white hover:text-white rounded-md";
+      : "px-3 py-2 hover:bg-blue-600 hover:text-white text-blue-800 rounded-md";
 
   return (
     <nav className="mx-auto max-w-screen-lg p-4 sm:px-6 sm:py-4 lg:px-8 lg:py-6 flex justify-between items-center bg-lime-200">
@@ -21,6 +21,12 @@ const Navbar = () => {
             className={navLinkClass}
           >
             Home
+          </NavLink>
+          <NavLink
+            to="/add-article"
+            className={navLinkClass}
+          >
+            Add Article
           </NavLink>
         </div>
       </div>
