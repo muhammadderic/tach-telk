@@ -1,15 +1,29 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-
-import { getArticle } from "../api/job";
-import Spinner from "../components/Spinner";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
+import { toast } from "react-toastify";
+
+import { deleteArticle, getArticle } from "../api/job";
+import Spinner from "../components/Spinner";
 
 const ArticlePage = () => {
   const [article, setArticle] = useState({});
   const [loading, setLoading] = useState(true);
 
   const { id } = useParams();
+  const navigate = useNavigate();
+
+  const deleteArticleHandler = (id) => {
+    const confirm = window.confirm("Are you sure you want to delete this listing?")
+
+    if (!confirm) return;
+
+    deleteArticle(id);
+
+    toast.success("Article Added Successfully");
+
+    navigate("/articles");
+  }
 
   useEffect(() => {
     const fetchArticle = async () => {
@@ -60,7 +74,7 @@ const ArticlePage = () => {
                   Edit
                 </Link>
                 <button
-                  // onClick={() => onDeleteClick(job.id)}
+                  onClick={() => deleteArticleHandler(article.id)}
                   className='bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block'
                 >
                   Delete

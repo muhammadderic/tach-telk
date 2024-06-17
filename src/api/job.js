@@ -31,3 +31,10 @@ export const updateArticle = async (id, updatedArticle) => {
     body: JSON.stringify(updatedArticle)
   })
 }
+
+// Delete article
+export const deleteArticle = async (id) => {
+  return await fetch(`/api/articles/${id}`, {
+    method: "DELETE",
+  })
+}
