@@ -11,6 +11,18 @@
       "title": "Its about machine learning",
       "text": "Machine learning is a field that learn about how an algorithm get more smarter",
       "category": "ai"
+    },
+    {
+      "id": "a612",
+      "title": "Its about Artificial intelligence",
+      "text": "Artificial intelligence is a field that learn about how an algorithm get more smarter",
+      "category": "ai"
+    },
+    {
+      "id": "a613",
+      "title": "Its about Digital Twin",
+      "text": "Digital Twin is a field that learn about how an algorithm get more smarter",
+      "category": "ai"
     }
   ]
 }

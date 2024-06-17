@@ -10,7 +10,7 @@ export const addArticle = async (newJob) => {
 }
 
 // Get all articles
-export const getAllArticles = async () => {
-  const res = await fetch("/api/articles");
+export const getAllArticles = async (url) => {
+  const res = await fetch(url);
   return res.json();
 }

@@ -10,8 +10,9 @@ const ReadingMaterials = ({ isHome = false }) => {
 
   useEffect(() => {
     const fetchArticles = async () => {
+      const url = isHome ? "/api/articles?_limit=3" : "/api/articles";
       try {
-        const data = await getAllArticles();
+        const data = await getAllArticles(url);
         setArticles(data);
       } catch (error) {
         console.error("Error fetching data: ", error);
@@ -21,20 +22,20 @@ const ReadingMaterials = ({ isHome = false }) => {
     }
 
     fetchArticles();
-  }, []);
+  }, [isHome]);
 
   return (
-    <>
-      <section className="mx-auto container-lg lg:container">
-        <h2 className="text-3xl font-bold text-blue-500 text-center">
+    <section className="mx-auto container-lg lg:container">
+      <div className="w-auto">
+        <h2 className="text-3xl font-bold text-blue-700 text-center">
           {isHome ? "Recent Articles" : "Articles"}
         </h2>
-      </section>
+      </div>
       {
         loading
           ? <Spinner loading={loading} />
           : (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="p-2 grid grid-cols-1 md:grid-cols-3 gap-6">
               {
                 articles.map(article => (
                   <ReadingMaterial
@@ -46,7 +47,7 @@ const ReadingMaterials = ({ isHome = false }) => {
             </div>
           )
       }
-    </>
+    </section>
   )
 }
 
