@@ -51,6 +51,21 @@ const ArticlePage = () => {
                   <p>{article.text}</p>
                 </div>
               </main>
+
+              <div className='max-w-screen-md mx-auto mt-12 p-6 flex gap-4 bg-white rounded-lg shadow-md'>
+                <Link
+                  to={`/edit-article/${article.id}`}
+                  className='bg-indigo-500 hover:bg-indigo-600 text-white text-center font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block'
+                >
+                  Edit
+                </Link>
+                <button
+                  // onClick={() => onDeleteClick(job.id)}
+                  className='bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block'
+                >
+                  Delete
+                </button>
+              </div>
             </section>
           )
       }

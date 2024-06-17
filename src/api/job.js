@@ -20,3 +20,14 @@ export const getArticle = async (id) => {
   const res = await fetch(`/api/articles/${id}`);
   return res.json();
 }
+
+// Update article
+export const updateArticle = async (id, updatedArticle) => {
+  return await fetch(`/api/articles/${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(updatedArticle)
+  })
+}

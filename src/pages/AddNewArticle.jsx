@@ -24,7 +24,7 @@ const AddNewArticle = () => {
 
     toast.success("Article Added Successfully");
 
-    navigate("/");
+    navigate("/articles");
   }
 
   return (
@@ -34,7 +34,7 @@ const AddNewArticle = () => {
           className="w-4/6 mx-auto mb-12"
           onSubmit={submitHandler}
         >
-          <h2 className='mb-6 text-3xl text-center text-blue-800 font-semibold'>Add New Article</h2>
+          <h2 className='mb-6 text-3xl text-center text-blue-800 font-bold'>Add New Article</h2>
 
           <div className='mb-4'>
             <label className='block text-gray-700 font-bold mb-2'>

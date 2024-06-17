@@ -10,6 +10,7 @@ import HomePage from "./pages/HomePage";
 import AddNewArticle from "./pages/AddNewArticle";
 import ArticlesPage from "./pages/ArticlesPage";
 import ArticlePage from "./pages/ArticlePage";
+import EditArticle from "./pages/EditArticle";
 
 const App = () => {
   const router = createBrowserRouter(
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/add-article" element={<AddNewArticle />} />
         <Route path="/articles" element={<ArticlesPage />} />
         <Route path="/articles/:id" element={<ArticlePage />} />
+        <Route path="/edit-article/:id" element={<EditArticle />} />
       </Route>
     )
   )
