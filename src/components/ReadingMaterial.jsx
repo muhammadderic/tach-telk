@@ -28,6 +28,7 @@ const ReadingMaterial = ({ article }) => {
 
       <div className="mb-2 flex flex-col lg:flex-row justify-end">
         <Link
+          to={`/articles/${article.id}`}
           className="h-[36px] bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded-lg text-center text-sm"
         >
           Read More

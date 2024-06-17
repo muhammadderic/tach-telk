@@ -14,3 +14,9 @@ export const getAllArticles = async (url) => {
   const res = await fetch(url);
   return res.json();
 }
+
+// Get an article
+export const getArticle = async (id) => {
+  const res = await fetch(`/api/articles/${id}`);
+  return res.json();
+}
