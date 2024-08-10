@@ -11,20 +11,22 @@ const ReadingMaterial = ({ article }) => {
   }
 
   return (
-    <div className="p-4 bg-lime-200 rounded-xl shadow-md relative">
-      <div className='mb-6'>
-        <div className='text-gray-600 my-2'>{article.category}</div>
-        <h3 className='text-xl font-bold'>{article.title}</h3>
+    <div className="flex flex-col justify-between py-4 px-8 bg-lime-200 rounded-xl shadow-md relative">
+      <div>
+        <div className='mb-6'>
+          <div className='text-gray-600 my-2'>{article.category}</div>
+          <h3 className='text-xl font-bold'>{article.title}</h3>
+        </div>
+
+        <div className="mb-5">{text}</div>
+
+        <button
+          onClick={() => setShowFullText((prevState) => !prevState)}
+          className="text-blue-700 mb-5 hover:text-blue-900"
+        >
+          {showFullText ? "Less" : "More"}
+        </button>
       </div>
-
-      <div className="mb-5">{text}</div>
-
-      <button
-        onClick={() => setShowFullText((prevState) => !prevState)}
-        className="text-blue-700 mb-5 hover:text-blue-900"
-      >
-        {showFullText ? "Less" : "More"}
-      </button>
 
       <div className="mb-2 flex flex-col lg:flex-row justify-end">
         <Link
