@@ -2,7 +2,7 @@ import Card from "./Card";
 
 const HomeCards = () => {
   return (
-    <section className="mx-auto container-lg lg:container">
+    <section className="mx-auto mb-12 max-w-screen-lg">
       <div className="w-full p-4 grid grid-cols-1 md:grid-cols-2 gap-4 rounded-lg">
         <Card
           title="For Tech Enthusiasts"

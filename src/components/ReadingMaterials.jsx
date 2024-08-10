@@ -25,9 +25,9 @@ const ReadingMaterials = ({ isHome = false }) => {
   }, [isHome]);
 
   return (
-    <section className="mx-auto container-lg lg:container">
+    <section className="mx-auto max-w-screen-lg">
       <div className="w-auto">
-        <h2 className="text-3xl font-bold text-blue-700 text-center">
+        <h2 className="my-4 text-3xl font-bold text-blue-700 text-center">
           {isHome ? "Recent Articles" : "Articles"}
         </h2>
       </div>
