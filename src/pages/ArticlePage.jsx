@@ -46,7 +46,7 @@ const ArticlePage = () => {
         loading
           ? <Spinner loading={loading} />
           : (
-            <section className="mx-auto container-lg lg:container">
+            <section className="mx-auto max-w-screen-lg">
               <div className='m-auto py-6 px-6'>
                 <Link
                   to='/articles'
